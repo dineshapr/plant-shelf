@@ -1,0 +1,39 @@
+.plant-card {
+    background-color: var(--card-bg);
+    border-radius: var(--border-radius);
+    padding: var(--spacing-unit);
+    box-shadow: var(--shadow);
+    width: 195px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+    // we can add hover over style
+    // &:hover {
+    //     transform: translateY(-4px);
+    //     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    // }
+}
+
+.card-link {
+    display: block;
+    text-decoration: none;
+    height: 100%;
+}
+
+.card-title {
+    font-size: 0.875rem;
+    font-weight: bold;
+    color: var(--title-color);
+    margin: 0.5rem 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.card-info {
+    font-size: 0.875rem;
+    color: var(--info-color);
+    margin: 0.25rem 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

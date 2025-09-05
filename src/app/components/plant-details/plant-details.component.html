@@ -1,0 +1,32 @@
+<div class="plant-details">
+    @if (plant$ | async; as plant) {
+    <header class="header-container">
+        <a [routerLink]="['/plants']" class="back-link">
+            <&nbsp; Back to all plants</a>
+                <div class="header">
+                    <h1 class="plant-name">{{ plant.name }}</h1>
+                    <p class="division">{{ plant.division }}</p>
+                </div>
+    </header>
+    <main class="content">
+        <div class="sidebar">
+            <div class="card">
+                <label>Address</label>
+                <p>{{ plant.address }}</p>
+                <p>{{ plant.city }}</p>
+                <p>{{ plant.country }}</p>
+                <label>Manager</label>
+                <p>{{ plant.manager }}</p>
+            </div>
+        </div>
+        <div class="main-content">
+            <div class="card">
+                <h2 class="card-header">Description</h2>
+                <pre class="card-description">{{ plant.description }}</pre>
+            </div>
+        </div>
+    </main>
+    } @else {
+    <p class="error-message" role="alert">{{ errorMessage$ | async }}</p>
+    }
+</div>

@@ -1,0 +1,8 @@
+<div class="plant-card">
+    <a [routerLink]="['/plants', plant.id]" class="card-link">
+        <h2 class="card-title">{{ plant.name }}</h2>
+        <p class="card-info">{{ plant.division }}</p>
+        <p class="card-info">{{ plant.address }}</p>
+        <p class="card-info">{{ plant.country }}</p>
+    </a>
+</div>

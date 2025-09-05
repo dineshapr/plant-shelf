@@ -1,0 +1,23 @@
+<div class="page-container">
+    <div class="header-container">
+        <div class="header">Plants</div>
+    </div>
+
+    <div class="cards-container">
+        @if (errorMessage$ | async; as errorMessage) {
+        <div class="error">{{ errorMessage }}</div>
+        }
+        @if (plantList$ | async; as plants) {
+        @for (plant of plants; track plant.id) {
+        <app-card [plant]="plant"></app-card>
+        } @empty {
+        <p>No plants available.</p>
+        }
+        } @else {
+        <p>Loading plants...</p>
+        }
+    </div>
+    @if (hasMoreResults) {
+    <button class="load-more-btn" (click)="loadPlants()">Load More Results</button>
+    }
+</div>

@@ -1,0 +1,90 @@
+.page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primary-bg);
+    min-height: 100vh;
+    margin: 0;
+    overflow-y: auto;
+}
+
+.header-container {
+    background-color: var(--header-bg);
+    width: 100%;
+    padding: var(--spacing-unit);
+    position: relative;
+    min-height: 100px;
+}
+
+.header {
+    background-color: var(--header-accent);
+    color: var(--text-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: var(--spacing-unit);
+    width: 80%;
+    height: 40px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    /* Offset for centering */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cards-container {
+    display: grid;
+    gap: var(--spacing-unit);
+    width: 100%;
+    max-width: var(--max-width);
+    padding: var(--spacing-unit);
+    margin-top: var(--spacing-unit);
+}
+
+.error {
+    color: #d32f2f;
+    font-weight: bold;
+    text-align: center;
+}
+
+.load-more-btn {
+    margin: var(--spacing-unit) 0;
+    padding: 0.75rem 1.5rem;
+    background-image: linear-gradient(to bottom right, var(--button-gradient-start), var(--button-gradient-end));
+    color: var(--text-color);
+    font-size: 0.875rem;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+// we can add hover over style
+// .load-more-btn:hover {
+//     background-image: none;
+//     background-color: var(--button-hover);
+//     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+// }
+
+/* Responsive grid */
+@media (max-width: 767px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1025px) {
+    .cards-container {
+        grid-template-columns: repeat(5, 1fr);
+    }
+}

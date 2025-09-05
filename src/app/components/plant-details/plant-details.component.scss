@@ -1,0 +1,121 @@
+.plant-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--primary-bg);
+    min-height: 100vh;
+    margin: 0;
+    overflow-y: auto;
+}
+
+.header-container {
+    background-color: var(--header-bg);
+    width: 100%;
+    padding: var(--spacing-unit);
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 100px;
+}
+
+.header {
+    background-color: var(--header-accent);
+    color: var(--text-color);
+    padding: var(--spacing-unit);
+    width: 80%;
+    max-width: var(--max-width);
+    height: 50px;
+    position: relative;
+    top: 50px;
+}
+
+.back-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.875rem;
+    position: absolute;
+    left: 150px;
+    top: 25px;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.plant-name {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.division {
+    color: var(--division-color);
+    margin: 0.25rem 0;
+    font-size: 0.875rem;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: var(--max-width);
+    padding: var(--spacing-unit);
+    margin-top: var(--spacing-unit);
+}
+
+.card {
+    background-color: #ffffff;
+    box-shadow: var(--shadow);
+    border-radius: var(--border-radius);
+    font-size: 0.875rem;
+}
+
+.sidebar .card {
+    padding: var(--spacing-unit);
+
+    label {
+        margin: 8px 0 8px 0;
+        display: flex;
+    }
+}
+
+.main-content .card {
+    padding: none;
+}
+
+.card p,
+.card-description {
+    margin: 0.25rem 0;
+    color: var(--info-color);
+    white-space: pre-wrap;
+    /* Allow text to wrap while preserving whitespace */
+    word-break: break-word;
+    /* Break long words to prevent overflow */
+}
+
+.card-header {
+    background-color: var(--header-accent);
+    color: var(--text-color);
+    padding: var(--spacing-unit);
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.card-description {
+    padding: var(--spacing-unit);
+}
+
+.error-message {
+    color: var(--error-color);
+    text-align: center;
+    padding: var(--spacing-unit);
+    font-weight: bold;
+}
+
+@media (max-width: 767px) {
+    .content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-unit);
+    }
+}
