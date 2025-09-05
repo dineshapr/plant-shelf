@@ -21,7 +21,7 @@
     color: var(--text-color);
     font-size: 1.5rem;
     font-weight: bold;
-    padding: var(--spacing-unit);
+    padding: var(--spacing-unit) 0;
     width: 80%;
     height: 40px;
     max-width: var(--max-width);
@@ -34,6 +34,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    h4 {
+        padding-left: 1.5rem;
+    }
 }
 
 .cards-container {

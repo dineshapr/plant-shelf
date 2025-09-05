@@ -1,6 +1,8 @@
 <div class="page-container">
     <div class="header-container">
-        <div class="header">Plants</div>
+        <div class="header">
+            <h4>Plants</h4>
+        </div>
     </div>
 
     <div class="cards-container">
@@ -10,8 +12,6 @@
         @if (plantList$ | async; as plants) {
         @for (plant of plants; track plant.id) {
         <app-card [plant]="plant"></app-card>
-        } @empty {
-        <p>No plants available.</p>
         }
         } @else {
         <p>Loading plants...</p>
