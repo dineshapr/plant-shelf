@@ -4,20 +4,26 @@
             <h4>Plants</h4>
         </div>
     </div>
-
     <div class="cards-container">
         @if (errorMessage$ | async; as errorMessage) {
         <div class="error">{{ errorMessage }}</div>
         }
+
         @if (plantList$ | async; as plants) {
         @for (plant of plants; track plant.id) {
         <app-card [plant]="plant"></app-card>
         }
-        } @else {
-        <p>Loading plants...</p>
+        @empty {
+        @if (!(loading$ | async)) {
+        <p>No plants available.</p>
+        }
+        }
+        }
+        @if (loading$ | async) {
+        <div class="loader">Loading plants... <span class="spinner"></span></div>
         }
     </div>
-    @if (hasMoreResults) {
+    @if (hasMoreResults && !(loading$ | async)) {
     <button class="load-more-btn" (click)="loadPlants()">Load More Results</button>
     }
 </div>

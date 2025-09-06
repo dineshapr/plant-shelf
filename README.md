@@ -1,59 +1,61 @@
 # PlantShelf
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.15.
+Welcome to **PlantShelf**, a web application for managing and displaying a collection of plants, built with Angular 19.2.0. This project allows users to browse a paginated list of plants, view details, and load more plants dynamically.
 
-## Development server
+## Prerequisites
 
-To start a local development server, run:
+Before you begin, ensure you have the following installed:
+- [Node.js](https://nodejs.org/) (version 18.x or later recommended)
+- [Angular CLI](https://angular.dev/tools/cli) (version 19.2.0)
+- A modern web browser (e.g., Chrome, Firefox)
 
+## Installation
+
+**Install Node Modules**:
+   Install the project dependencies using npm:
+   ```bash
+   npm install
+   ```
+
+## Running the Application
+
+To start the development server:
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Open your browser and navigate to `http://localhost:4200/`.
+- The application will automatically reload when you modify source files.
 
-## Code scaffolding
+## Running Unit Tests
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
+To execute unit tests using [Karma](https://karma-runner.github.io):
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+This runs the test suite for the application, ensuring components like `PlantListComponent`, `PlantDetailsComponent` and `CardComponent` function correctly.
 
-For end-to-end (e2e) testing, run:
+## Project Structure
 
+- **`src/app`**: Contains the main application code, including components (`PlantListComponent`, `CardComponent`, `PlantDetailsComponent`), services (`PlantService`), and models (`Plant`, `PlantListResponse`).
+
+## Building for Production
+
+To build the project for production:
 ```bash
-ng e2e
+ng build
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+The optimized build artifacts will be stored in the `dist/` directory.
+
+## Screenshots
+
+<img src="images/plantshelf.png" alt="PlantShelf Screenshot" width="600" height="auto">
+
+<img src="images/plant-details-view.png" alt="Plant Details View" width="600" height="auto">
 
 ## Additional Resources
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- [Angular CLI Documentation](https://angular.dev/tools/cli)
+- [Angular Official Website](https://angular.dev/)

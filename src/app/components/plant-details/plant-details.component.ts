@@ -31,6 +31,7 @@ export class PlantDetailsComponent {
           this.errorMessage$.next('Invalid plant ID');
           return of(null as any);
         }
+
         return this.plantService.getPlantById(+id).pipe(
           catchError((error) => {
             this.errorMessage$.next('Failed to load plant details');
