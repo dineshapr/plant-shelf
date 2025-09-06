@@ -1,24 +1,22 @@
-import { Component, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { PlantService } from '../../services/plant.service';
 import { Plant } from '../../models/plant';
 import { RouterModule } from '@angular/router';
 import { CardComponent } from "../card/card.component";
 import { BehaviorSubject, catchError, Observable, of, Subject, takeUntil, tap } from 'rxjs';
 import { CommonModule } from '@angular/common';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 
 @Component({
   selector: 'app-plant-list',
   standalone: true,
   imports: [RouterModule, CardComponent, CommonModule],
   templateUrl: './plant-list.component.html',
-  styleUrl: './plant-list.component.scss'
+  styleUrl: './plant-list.component.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 export class PlantListComponent {
-  trackByPlantId(arg0: number, plant: Plant): any {
-    throw new Error('Method not implemented.');
-  }
+
   private plantService = inject(PlantService);
   private plantSubject = new BehaviorSubject<Plant[]>([]);
   private destroy$ = new Subject<void>();
@@ -50,6 +48,11 @@ export class PlantListComponent {
       }),
       takeUntil(this.destroy$)
     ).subscribe();
+  }
+
+  // preventing unnecessary re-rendering of existing <app-card> components
+  trackByPlantId(index: number, plant: Plant): string | number {
+    return plant.id;
   }
 
   ngOnDestroy(): void {
