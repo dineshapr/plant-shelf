@@ -2,10 +2,11 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PlantDetailsComponent } from './plant-details.component';
 import { PlantService } from '../../services/plant.service';
-import { HttpClientTestingModule } from '@angular/common/http/testing';
+import { HttpClientTestingModule, provideHttpClientTesting } from '@angular/common/http/testing';
 import { of, throwError } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 import { Plant } from '../../models/plant';
+import { provideHttpClient } from '@angular/common/http';
 
 describe('PlantDetailsComponent', () => {
   let component: PlantDetailsComponent;
@@ -28,13 +29,14 @@ describe('PlantDetailsComponent', () => {
     };
 
     await TestBed.configureTestingModule({
-      imports: [PlantDetailsComponent, HttpClientTestingModule],
+      imports: [PlantDetailsComponent],
       providers: [
         { provide: ActivatedRoute, useValue: activatedRouteMock },
         { provide: PlantService, useValue: plantServiceMock },
+        provideHttpClient(),
+        provideHttpClientTesting()
       ]
-    })
-      .compileComponents();
+    }).compileComponents();
 
     fixture = TestBed.createComponent(PlantDetailsComponent);
     component = fixture.componentInstance;
@@ -52,7 +54,7 @@ describe('PlantDetailsComponent', () => {
     component.plant$.subscribe((plant) => {
       expect(plant).toEqual(mockPlant);
     });
-    expect(plantServiceMock.getPlantById).toHaveBeenCalledWith(1); // <-- use number, not string
+    expect(plantServiceMock.getPlantById).toHaveBeenCalledWith(1); // use number, not string
   });
 
   it('should handle errors when loading plant details', () => {

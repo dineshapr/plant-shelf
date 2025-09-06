@@ -17,7 +17,7 @@ describe('CardComponent', () => {
 
     fixture = TestBed.createComponent(CardComponent);
     component = fixture.componentInstance;
-    component.plant = { id: 1, name: 'Fern', description: 'Green plant' };
+    component.plant = { id: 1, name: 'Wallace-Patton', description: 'Eligendi quod eaque facere.' };
     fixture.detectChanges();
   });
 
@@ -26,7 +26,7 @@ describe('CardComponent', () => {
   });
 
   it('should accept a plant input', () => {
-    const testPlant: Plant = { id: 1, name: 'Fern', description: 'Green plant' };
+    const testPlant: Plant = { id: 1, name: 'Wallace-Patton', description: 'Eligendi quod eaque facere.' };
     component.plant = testPlant;
     fixture.detectChanges();
     expect(component.plant).toEqual(testPlant);

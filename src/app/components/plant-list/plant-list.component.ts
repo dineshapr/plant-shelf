@@ -36,6 +36,7 @@ export class PlantListComponent {
   loadPlants(): void {
     this.plantService.getPlantList().pipe(
       tap((data) => {
+        // Check if there are more results to load
         this.hasMoreResults = !!data.next;
         this.errorMessage$.next('');
 

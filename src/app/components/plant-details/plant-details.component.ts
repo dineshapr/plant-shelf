@@ -25,6 +25,7 @@ export class PlantDetailsComponent {
   ngOnInit() {
     this.plant$ = this.route.paramMap.pipe(
       switchMap((params) => {
+        // Extract the plant ID from route parameters
         const id = params.get('id');
         if (!id) {
           this.errorMessage$.next('Invalid plant ID');

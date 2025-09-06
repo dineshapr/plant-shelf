@@ -67,12 +67,12 @@
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-// we can add hover over style
-// .load-more-btn:hover {
-//     background-image: none;
-//     background-color: var(--button-hover);
-//     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-// }
+// Can add hover over style
+.load-more-btn:hover {
+    background-image: none;
+    background-color: var(--button-hover);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
 
 /* Responsive grid */
 @media (max-width: 767px) {

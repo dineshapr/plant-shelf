@@ -6,11 +6,11 @@
     width: 195px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 
-    // we can add hover over style
-    // &:hover {
-    //     transform: translateY(-4px);
-    //     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    // }
+    // Can add hover over style
+    &:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 }
 
 .card-link {
