@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { BehaviorSubject, catchError, Observable, of, switchMap } from 'rxjs';
 import { Plant } from '../../models/plant';
 import { ActivatedRoute, RouterModule } from '@angular/router';
-import { PlantService } from '../../services/plant.service';
+import { PlantService } from '../../core/services/plant.service';
 import { CommonModule } from '@angular/common';
 
 @Component({

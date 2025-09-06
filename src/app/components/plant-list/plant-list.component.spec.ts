@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { of, throwError } from 'rxjs';
 import { PlantListComponent } from './plant-list.component';
-import { PlantService } from '../../services/plant.service';
+import { PlantService } from '../../core/services/plant.service';
 import { Plant } from '../../models/plant';
 import { CommonModule } from '@angular/common';
 

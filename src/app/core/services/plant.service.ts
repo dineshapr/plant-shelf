@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
-import { PlantListResponse } from '../models/plant-list-response';
+import { PlantListResponse } from '../../models/plant-list-response';
 import { HttpClient } from '@angular/common/http';
-import { Plant } from '../models/plant';
+import { Plant } from '../../models/plant';
 
 @Injectable({
   providedIn: 'root'

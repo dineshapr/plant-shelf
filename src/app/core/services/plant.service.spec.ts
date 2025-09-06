@@ -1,8 +1,8 @@
 import { TestBed } from '@angular/core/testing';
 import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
 import { PlantService } from './plant.service';
-import { PlantListResponse } from '../models/plant-list-response';
-import { Plant } from '../models/plant';
+import { PlantListResponse } from '../../models/plant-list-response';
+import { Plant } from '../../models/plant';
 
 describe('PlantService', () => {
   let service: PlantService;

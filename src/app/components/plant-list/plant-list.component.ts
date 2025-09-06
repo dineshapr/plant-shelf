@@ -1,11 +1,10 @@
 import { Component, inject, ChangeDetectionStrategy } from '@angular/core';
-import { PlantService } from '../../services/plant.service';
+import { PlantService } from '../../core/services/plant.service';
 import { Plant } from '../../models/plant';
 import { RouterModule } from '@angular/router';
 import { CardComponent } from '../card/card.component';
 import { BehaviorSubject, catchError, Observable, of, Subject, tap } from 'rxjs';
 import { CommonModule } from '@angular/common';
-import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { PlantListResponse } from '../../models/plant-list-response';
 
 @Component({

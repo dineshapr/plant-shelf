@@ -51,9 +51,9 @@ The optimized build artifacts will be stored in the `dist/` directory.
 
 ## Screenshots
 
-<img src="images/plantshelf.png" alt="PlantShelf Screenshot" width="600" height="auto">
+<img src="src/assets/images/plantshelf.png" alt="PlantShelf Screenshot" width="600"/>
 
-<img src="images/plant-details-view.png" alt="Plant Details View" width="600" height="auto">
+<img src="src/assets/images/plant-details-view.png" alt="Plant Details View" width="600"/>
 
 ## Additional Resources
 

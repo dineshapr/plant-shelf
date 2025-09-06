@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PlantDetailsComponent } from './plant-details.component';
-import { PlantService } from '../../services/plant.service';
+import { PlantService } from '../../core/services/plant.service';
 import { provideHttpClientTesting } from '@angular/common/http/testing';
 import { of, throwError } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
