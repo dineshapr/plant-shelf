@@ -1,8 +1,9 @@
 import { TestBed } from '@angular/core/testing';
-import { HttpClientTestingModule, HttpTestingController } from '@angular/common/http/testing';
+import { provideHttpClientTesting, HttpTestingController } from '@angular/common/http/testing';
 import { PlantService } from './plant.service';
 import { PlantListResponse } from '../../models/plant-list-response';
 import { Plant } from '../../models/plant';
+import { provideHttpClient } from '@angular/common/http';
 
 describe('PlantService', () => {
   let service: PlantService;
@@ -12,8 +13,7 @@ describe('PlantService', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [HttpClientTestingModule],
-      providers: [PlantService]
+      providers: [PlantService, provideHttpClient(), provideHttpClientTesting()]
     });
 
     service = TestBed.inject(PlantService);
