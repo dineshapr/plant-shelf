@@ -1,12 +1,14 @@
 <div class="plant-details">
     @if (plant$ | async; as plant) {
     <header class="header-container">
-        <a [routerLink]="['/plants']" class="back-link">
-            <&nbsp; Back to all plants</a>
-                <div class="header">
-                    <h1 class="plant-name">{{ plant.name }}</h1>
-                    <p class="division">{{ plant.division }}</p>
-                </div>
+        <div class="link-container"> <a [routerLink]="['/plants']" class="back-link">
+                <&nbsp; Back to all plants</a>
+        </div>
+
+        <div class="header">
+            <h1 class="plant-name">{{ plant.name }}</h1>
+            <p class="division">{{ plant.division }}</p>
+        </div>
     </header>
     <main class="content">
         <div class="sidebar">

@@ -3,8 +3,10 @@
     border-radius: var(--border-radius);
     padding: var(--spacing-unit);
     box-shadow: var(--shadow);
-    width: 195px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    flex: 1 0 18%;
+    /* Equal width for 5 cards, ~20% minus gap */
+    box-sizing: border-box;
 
     // Can add hover over style
     &:hover {
